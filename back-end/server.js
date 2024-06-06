@@ -20,8 +20,7 @@ app.post("/signup", async (req, res) => {
     const userData = await User.create({ username, email, password });
 
     // Sending the response
-    // res.status(201).send(userData);
-    res.redirect("/welcome");
+    res.status(201).send(userData);
   } catch (error) {
     // Handling errors
     console.error(error);
